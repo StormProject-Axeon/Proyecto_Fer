@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seul Vibes Menu Popup</title>
+    <style>
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 70%;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-btn">&#9776;</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="menu-item">Álbumes</div>
+            <div class="menu-item">Ropa</div>
+            <div class="menu-item">Lightstick</div>
+            <div class="menu-item">Accesorios</div>
+            <div class="menu-item">Photobook</div>
+            <div class="menu-item">Mercancía de conciertos</div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const modal = document.getElementById('myModal');
+
+        menuBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
