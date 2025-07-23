@@ -1,0 +1,106 @@
+header {
+    background-color: #87CEEB;
+    padding: 10px 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 30px 5px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    color: #666;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.small-logo {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.login-container h2 {
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.create-account {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

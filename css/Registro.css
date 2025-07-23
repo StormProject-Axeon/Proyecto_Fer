@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+}
+
+.header {
+    background-color: #00aaff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    border-bottom: 2px solid #0077cc;
+}
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff3333;
+    margin-right: 10px;
+}
+
+.header .search-bar {
+    flex-grow: 1;
+}
+
+.header .search-bar input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.header .icons a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header .icons a:first-child {
+    margin-left: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0052a3;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+}
