@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  background-color: #b4e0f9;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 45px;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+
+main {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.pago-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pago-form label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+
+.pago-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ccefff;
+  font-size: 14px;
+  color: #333;
+}
+
+.pago-form input::placeholder {
+  color: #888;
+}
+
+.metodos-pago {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.metodos-pago img {
+  height: 30px;
+  width: auto;
+}
+
+.pago-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total {
+  font-weight: bold;
+  color: #3366ff;
+  font-size: 18px;
+}
+
+.pago-form button {
+  background-color: #b4e0f9;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pago-form button:hover {
+  background-color: #a0d2f3;
+}

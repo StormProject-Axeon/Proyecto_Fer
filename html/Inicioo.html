@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seul Vibes</title>
+  <link rel="stylesheet" href="../html/Inicioo.css">
+</head>
+<body>
+  <header>
+    <img src="../img/Logo.jpeg" alt="Seul Vibes" class="logo" />
+    <a href="#" class="menu-btn">Menú</a>
+    <input type="text" placeholder="Buscar producto" class="search" />
+    <div class="icons">
+      <a href="#" class="icon-btn">❤️</a>
+      <a href="#" class="icon-btn">👤 Bienvenido</a> |
+         <a href="index.html">Iniciar sección</a>
+      <a href="#" class="icon-btn">🛒 Carrito <span>$0.00</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="carousel" id="carousel">
+        <div class="slide-track" id="slide-track">
+          <div class="slide"><img src="../img/Groupbts.jpg" alt="BTS" /></div>
+          <div class="slide"><img src="../img/ATEEZ.jpg" alt="Ateez" /></div>
+          <div class="slide"><img src="../img/RED.VELVET.jpg" alt="Twice" /></div>
+        </div>
+        <div class="dots" id="dots">
+          <span onclick="goToSlide(0)"></span>
+          <span onclick="goToSlide(1)"></span>
+          <span onclick="goToSlide(2)"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="categorias">
+      <h2><a href="#">COMPRAR POR CATEGORÍAS</a></h2>
+      <div class="grid-categorias">
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Vinilloss.jpg" alt="Álbumes" /></a>
+          <p><a href="#">Álbumes</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Ropaa.jpg" alt="Ropa" /></a>
+          <p><a href="#">Ropa</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Lightsticksss.jpg" alt="Lightstick" /></a>
+          <p><a href="#">Lightstick</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Collaar.jpg" alt="Accesorios" /></a>
+          <p><a href="#">Accesorios</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Photobook.jpeg" alt="Photobooks" /></a>
+          <p><a href="#">Photobooks</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Merch.jpg" alt="Mercancía de Conciertos" /></a>
+          <p><a href="#">Mercancía de Conciertos</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Peluchess.jpg" alt="Peluches" /></a>
+          <p><a href="#">Peluches</a></p>
+        </div>
+        <div class="categoria-item">
+          <a href="#"><img src="../img/Fanmade.jpg" alt="Fanmade" /></a>
+          <p><a href="#">Fanmade</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Seul Vibes. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const slideTrack = document.getElementById("slide-track");
+    const dots = document.getElementById("dots").children;
+    const slides = slideTrack.children;
+    let currentIndex = 0;
+    let startX = 0;
+    let autoSlide;
+
+    function updateSlide() {
+      slideTrack.style.transform = `translateX(-${100 * currentIndex}%)`;
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      dots[currentIndex].classList.add("active");
+    }
+
+    function moveSlide(direction) {
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      updateSlide();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlide();
+    }
+
+    function startAutoSlide() {
+      autoSlide = setInterval(() => moveSlide(1), 2000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlide);
+    }
+    
+    const carousel = document.getElementById("carousel");
+    carousel.addEventListener("mouseenter", stopAutoSlide);
+    carousel.addEventListener("mouseleave", startAutoSlide);
+
+    slideTrack.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
+    slideTrack.addEventListener("touchend", (e) => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) moveSlide(1);
+      if (endX - startX > 50) moveSlide(-1);
+    });
+
+    startAutoSlide();
+    updateSlide();
+  </script>
+</body>
+</html>

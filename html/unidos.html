@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seul Vibes - Born Pink, BP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 100;
+    }
+    
+    .logo {
+      height: 40px;
+    }
+    
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: auto;
+      padding: 8px 15px;
+    }
+    
+    .search-bar {
+      display: flex;
+      margin: 0 20px;
+      flex-grow: 1;
+      max-width: 500px;
+    }
+    
+    .search-bar input {
+      width: 100%;
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px 0 0 4px;
+      font-size: 14px;
+    }
+    
+    .search-bar button {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    /* Estilos para el menú desplegable */
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 1000;
+      padding: 40px 20px 20px;
+      box-sizing: border-box;
+    }
+    
+    .menu-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .menu-content h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .menu-content ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    
+    .menu-content li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .menu-content li strong {
+      font-weight: 700;
+    }
+    
+    .menu-content ul ul {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    
+    .menu-divider {
+      border: none;
+      height: 1px;
+      background-color: #eee;
+      margin: 20px 0;
+    }
+    
+    .menu-content h2 {
+      font-size: 20px;
+      margin: 25px 0 15px 0;
+      color: #333;
+    }
+    
+    .menu-footer {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    
+    /* Estilos del producto */
+    .product-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      gap: 40px;
+    }
+    
+    .product-image {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 8px;
+    }
+    
+    .product-details {
+      flex: 1;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../media/Seul.jpg" alt="Seul Vibes Logo" class="logo">
+    <button class="menu-btn" id="menuBtn">Menú</button>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar producto" />
+      <button>🔍</button>
+    </div>
+    <div class="user-actions">
+      <span>❤</span>
+      <span>Bienvenido</span>
+      <button>Iniciar sesión</button>
+      <div class="cart">
+        <span>🛒</span>
+        <span>Carrito $0.00</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú desplegable -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="close-btn" id="closeBtn">×</button>
+    <div class="menu-content">
+      <h1>Buscar producto</h1>
+      
+      <ul>
+        <li><strong>Álbumes</strong>
+          <ul>
+            <li>Ropa</li>
+            <li>Lightstick</li>
+            <li>Accesorios</li>
+            <li>Photobook</li>
+            <li>Mercancia de conciertos</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <hr class="menu-divider">
+      
+      <h2>COMPRAR POR CATEGORÍAS</h2>
+      
+      <p class="menu-footer">© 2025 seul vibes. Todos los derechos reservados.</p>
+    </div>
+  </div>
+
+  <!-- Producto -->
+  <main>
+    <div class="product-container">
+      <img src="../born pink.jpg" alt="Born Pink, BP" class="product-image">
+      <div class="product-details">
+        <h1>Diadema StrayKids</h1>
+        <div class="rating">
+          <span class="price">$2.00</span>
+          <span class="stars">★★★★☆ (10)</span>
+        </div>
+        <button class="add-to-cart">Añadir al carrito</button>
+        <p>Este producto es original. Cualquier queja que tenga respecto al producto, escríbanos al correo <strong>SeulVibes487@gmail.com</strong>.<br><br>
+        Los productos tienen devolución si: el producto se entregó dañado, no era lo que pidió o presenta algún otro defecto.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Seul Vibes. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Script para el menú desplegable
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    menuBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      menuOverlay.style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+
+    closeBtn.addEventListener("click", function() {
+      menuOverlay.style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+
+    // Cierra el menú al hacer clic fuera del contenido
+    menuOverlay.addEventListener("click", function(e) {
+      if (e.target === menuOverlay) {
+        menuOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  </script>
+</body>
+</html>

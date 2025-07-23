@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Completa tu Compra - Seul Vibes</title>
+  <link rel="stylesheet" href="../html/Metododepago.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="../img/Logo.jpeg" alt="Seul Vibes Logo" />
+    </div>
+    <h1>Completa tu Compra</h1>
+  </header>
+
+  <!-- Formulario de pago -->
+  <main>
+    <form class="pago-form">
+      <label for="numero">NUMERO DE LA TARJETA</label>
+      <input type="text" id="numero" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" inputmode="numeric" />
+
+      <label>TIPO DE PAGO</label>
+      <div class="metodos-pago">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+      </div>
+
+      <label for="titular">TITULAR DE LA TARJETA</label>
+      <input type="text" id="titular" placeholder="Nombre del Propietario" />
+
+      <label for="cvv">CVV</label>
+      <input 
+        type="text" 
+        id="cvv" 
+        placeholder="XXX" 
+        maxlength="3" 
+        inputmode="numeric" 
+        pattern="\d{3}" 
+        required 
+      />
+
+      <div class="pago-final">
+        <span class="total">TOTAL</span>
+        <button type="submit">Confirmar Compra</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Validación con JS -->
+  <script>
+    const cvvInput = document.getElementById('cvv');
+    cvvInput.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+      if (this.value.length > 3) {
+        this.value = this.value.slice(0, 3);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f7e8d0; /* beige claro */
+  background-image:
+    radial-gradient(ellipse at 30% 40%, rgba(255 255 255 / 0.3), transparent 30%),
+    radial-gradient(ellipse at 70% 60%, rgba(255 255 255 / 0.4), transparent 40%);
+  background-repeat: no-repeat;
+  background-size: 80% 80%, 70% 70%;
+  background-position: top left, bottom right;
+}

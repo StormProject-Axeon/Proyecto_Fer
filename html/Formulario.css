@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* ENCABEZADO */
+header {
+  background-color: #b4e0f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.buscador {
+  flex: 1;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  outline: none;
+}
+
+.buscador button {
+  padding: 8px;
+  border: none;
+  background-color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.iconos {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.iconos img {
+  height: 24px;
+}
+
+.iconos span {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* FORMULARIO */
+main {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.registro {
+  background-color: #f4f4f4;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.campo input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.crear-cuenta {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}

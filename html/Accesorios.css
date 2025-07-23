@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+}
+
+.barra-superior {
+  background: #b3e5fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+}
+
+.buscador input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  width: 250px;
+}
+
+.buscador button {
+  margin-left: -35px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icono {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.usuario {
+  font-size: 14px;
+  text-align: left;
+}
+
+.carrito {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono-carrito {
+  font-size: 22px;
+}
+
+.notificacion {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+main {
+  padding: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.producto img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  color: #ff9800;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.precio {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.agotado {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+button {
+  background-color: #dcedc8;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
