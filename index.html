@@ -11,7 +11,7 @@
 <body>
   <header>
     <img src="../img/Logo.jpeg" alt="Seul Vibes" class="logo" />
-    <a href="#" class="menu-btn">Menú</a>
+    <a href="../html/Menú.html" class="menu-btn">Menú</a>
     <input type="text" placeholder="Buscar producto" class="search" />
     
     <div class="icons">
@@ -83,60 +83,3 @@
           <p><a href="#">Fanmade</a></p>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Seul Vibes. Todos los derechos reservados.</p>
-  </footer>
-
-  <script>
-    const slideTrack = document.getElementById("slide-track");
-    const dots = document.getElementById("dots").children;
-    const slides = slideTrack.children;
-    let currentIndex = 0;
-    let startX = 0;
-    let autoSlide;
-
-    function updateSlide() {
-      slideTrack.style.transform = `translateX(-${100 * currentIndex}%)`;
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-      }
-      dots[currentIndex].classList.add("active");
-    }
-
-    function moveSlide(direction) {
-      currentIndex = (currentIndex + direction + slides.length) % slides.length;
-      updateSlide();
-    }
-
-    function goToSlide(index) {
-      currentIndex = index;
-      updateSlide();
-    }
-
-    function startAutoSlide() {
-      autoSlide = setInterval(() => moveSlide(1), 2000);
-    }
-
-    function stopAutoSlide() {
-      clearInterval(autoSlide);
-    }
-    
-    const carousel = document.getElementById("carousel");
-    carousel.addEventListener("mouseenter", stopAutoSlide);
-    carousel.addEventListener("mouseleave", startAutoSlide);
-
-    slideTrack.addEventListener("touchstart", (e) => startX = e.touches[0].clientX);
-    slideTrack.addEventListener("touchend", (e) => {
-      let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) moveSlide(1);
-      if (endX - startX > 50) moveSlide(-1);
-    });
-
-    startAutoSlide();
-    updateSlide();
-  </script>
-</body>
-</html>
